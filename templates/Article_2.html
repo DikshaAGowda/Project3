@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <title>Index Page</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: aliceblue;">
+    <a class="navbar-brand mb-0 h1" href="#">IS601</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link disabled active" href="/Home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_1">Article1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_2">Article2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_3">Article3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_4">Article4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Calculator">Calculator</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">AAA Testing</h1>
+
+        <p class="lead">Suggests that you should divide your test method into three sections: Arrange, Act and Assert</p>
+
+</div>
+
+<div class="container">
+    <div class="row">
+
+<div class="card">
+    <h5 class="card-header"><b>What is AAA Testing?</b></h5>
+
+
+    <p class="card-text">The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.</p>
+    <ul>
+        <li><b>Arrange:</b> This is the first step of a unit test application. Here we will arrange the test, in other words we will do the necessary setup of the test. For example, to perform the test we need to create an object of the targeted class, if necessary, then we need to create mock objects and other variable initialization, something like this.</li>
+        <li><b>Act:</b> This is the middle step of a unit step application. In this step we will execute the test. In other words we will do the actual unit testing and the result will be obtained from the test application. Basically we will call the targeted function in this step using the object that we created in the previous step.</li>
+        <li><b>Assert:</b> This is the last step of a unit test application. In this step we will check and verify the returned result with expected results.</li>
+        </ul>
+    <div class="text-center" style="width:40rem">
+        <img src="/static/images/aaa.jpg" class="card-img-top"
+             alt="Load image">
+
+    </div>
+
+    <p><b>Arrange :</b> The block of code that sets up the conditions for the test action. In the below example,
+        mynumbers = (10.0, 5.0, 2.5) shows arrange.</p>
+    <p>Guidelines to use Arrange:</p>
+    <ul>
+        <li>Use a single block of code with no empty lines.</li>
+        <li>Do not use assert in the Arrange block. If you need to make an assertion about your arrangement, then this is a smell that your arrangement is too complicated and should be extracted to a fixture or setup function and tested in its own right.</li>
+        <li>Only prepare non-deterministic results not available after action.</li>
+
+    </ul>
+
+    <p><b>Act :</b> The line of code where the Action is taken on the System Under Test(SUT). In the below example,
+        subtraction = Subtraction(mynumbers) shows act.</p>
+    <p>Guidelines to use Act:</p>
+    <ul>
+        <li>Start every Action line with result =.
+
+            This makes it easier to distinguish test actions and means you can avoid the hardest job in programming: naming. When every result is called result, then you do not need to waste brain power wondering if it should be item = or response = etc. An added benefit is that you can find test actions easily with a tool like grep.</li>
+
+
+    </ul>
+
+    <p><b>Assert :</b> The block of code that performs the assertions on the state of the SUT after the action. In the below example,
+        assert subtraction.get_result() == -17.5 shows act.</p>
+    <p>Guidelines to use Assert:</p>
+    <ul>
+        <li>Use simple blocks of assertions. If you find that you are repeatedly writing the same code to extract information from the SUT and perform assertions on it, then consider extracting an assertion helper.</li>
+
+    </ul>
+
+
+
+    <div class="text-center" style="width:70rem">
+        <p><b>Sample code to demonstrate AAA of testing</b></p>
+        <img src="/static/images/arrange.PNG" class="card-img-top"
+             alt="Load image">
+
+    </div>
+
+</div>
+    </div>
+    <div class="row">
+        <h3>External Data Testing</h3>
+        <p>A simple way to store big data sets is to use CSV files (comma separated files).
+
+        CSV files contains plain text and is a well known format that can be read by everyone including Pandas. Pandas makes data exploration and manipulation easy. For this you need to install the package by using the command <i>import pandas as pd</i>
+        If it is not installed the use the command <i>pip install pandas</i>
+            In our examples we will be using a CSV file called 'data.csv'.</p>
+
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/externaldata3.PNG" class="card-img-top"
+                 alt="Load image">
+            <p><b>Code using pandas library</b></p>
+
+        </div>
+        <p> Another way to do external data testing is through unittest and csv as shown below</p>
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/externaldata2.PNG" class="card-img-top"
+                 alt="Load image">
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="card text-center">
+    <div class="card-footer text-dark">
+        Diksha Anantha Gowda &#169;
+        <a href="https://validator.w3.org/#validate_by_uri">W3C Validator</a>
+    </div>
+</div>
+</body>
+</html>

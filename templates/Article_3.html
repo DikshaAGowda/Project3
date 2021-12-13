@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <title>Index Page</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: aliceblue;">
+    <a class="navbar-brand mb-0 h1" href="#">IS601</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link disabled active" href="/Home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_1">Article1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_2">Article2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_3">Article3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_4">Article4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Calculator">Calculator</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Principles of Object-Oriented Programming</h1>
+
+</div>
+
+<div class="container">
+    <div><b>Object-Oriented Programming (OOP)</b> has four essential characteristics: abstraction, encapsulation, inheritance, and polymorphism.</div>
+    <div class="row">
+
+        <h3>Encapsulation</h3>
+        <p>Encapsulation in Python describes the concept of bundling data and methods within a single unit. So, for example, when you create a class, it means you are implementing encapsulation. A class is an example of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
+        </p>
+
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/Encapsulation.png" class="card-img-top"
+                 alt="Load image">
+
+        </div>
+        <p>In this example, we create a Calculation class by defining attributes such as value_a and value_b as an instance variable and using create()instance methods.</p>
+
+        <p>Using encapsulation, we can hide an object’s internal representation from the outside. This is called information hiding.
+
+            Also, encapsulation allows us to restrict accessing variables and methods directly and prevent accidental data modification by creating private data members and methods within a class.</p>
+        <p>Encapsulation is a way to can restrict access to methods and variables from outside of class. Whenever we are working with the class and dealing with sensitive data, providing access to all variables used within the class is not a good choic</p>
+
+
+
+    </div>
+    <div class="row">
+        <h3>Inheritance</h3>
+        <p>The process of inheriting the properties of the parent class into a child class is called inheritance. The existing class is called a base class or parent class and the new class is called a subclass or child class or derived class.</p>
+
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/Abstraction.PNG" class="card-img-top"
+                 alt="Load image">
+            <p>Parent class Calculation</p>
+        </div>
+        <div>
+        <h6>Inheritance Example with code snippet</h6></div>
+        <div class="text-center"
+             style="width:35rem">
+
+            <p><b></b></p>
+            <img src="/static/images/child.PNG" class="card-img-top"
+                 alt="Load image">
+            <p>Child class Division</p>
+        </div>
+
+        <p>In this example, we create a Calculation class as the parent class by defining attributes such as value_a and value_b as an instance variable and using create()instance methods.
+
+        Using encapsulation, we can hide an object’s internal representation from the outside. This is called information hiding.
+
+            Also, encapsulation allows us to restrict accessing variables and methods directly and prevent accidental data modification by creating private data members and methods within a class.</p>
+        <p>Encapsulation is a way to can restrict access to methods and variables from outside of class. Whenever we are working with the class and dealing with sensitive data, providing access to all variables used within the class is not a good choic</p>
+
+
+        <p>In Object-oriented programming, inheritance is an important aspect. The main purpose of inheritance is the re-usability of code because we can use the existing class to create a new class instead of creating it from scratch.</p>
+        <p>In inheritance, the child class acquires all the data members, properties, and functions from the parent class. Also, a child class can also provide its specific implementation to the methods of the parent class.</p>
+    </div>
+
+    <div class="row">
+        <h3>Polymorphism</h3>
+        <p>Polymorphism in Python is the ability of an object to take many forms. In simple words, polymorphism allows us to perform the same action in different ways.</p>
+        <p>Using method overriding polymorphism allows us to define methods in the child class that have the same name as the methods in the parent class. This process of re-implementing the inherited method in the child class is known as Method Overriding.</p>
+        <p>In polymorphism, Python first checks the object’s class type and executes the appropriate method when we call the method. </p>
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/polymorphism.PNG" class="card-img-top"
+                 alt="Load image">
+
+        </div>
+
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/polymorphism2.PNG" class="card-img-top"
+                 alt="Load image">
+
+        </div>
+        <p>In polymorphism, Python first checks the object’s class type and executes the appropriate method when we call the method.For example, If you create the divison object, then Python calls the get_result() method from a divison class.</p>
+
+        <p>In this example, we have a Calculator class as a parent and a ‘division’ and ‘addition’ as its sub-class. But each Calculator operation can have a value for get_result method, so we can have the same instance method name in each class but with a different implementation. Using this code can be extended and easily maintained over time</p>
+
+
+    </div>
+
+    <div class="row">
+        <h3>Abstraction</h3>
+        <p>Abstraction is used to hide the internal functionality of the function from the users. The users only interact with the basic implementation of the function, but inner working is hidden. User is familiar with that "what function does" but they don't know "how it does."</p>
+        <p>In Python, an abstraction is used to hide the irrelevant data/class in order to reduce the complexity. It also enhances the application efficiency.</p>
+        <p>A class that consists of one or more abstract method is called the abstract class. Abstract methods do not contain their implementation. Abstract class can be inherited by the subclass and abstract method gets its definition in the subclass. Abstraction classes are meant to be the blueprint of the other class. An abstract class can be useful when we are designing large functions. An abstract class is also helpful to provide the standard interface for different implementations of components. Python provides the abc module to use the abstraction in the Python program. Let's see the following syntax. You can see the syntax in the below code.</p>
+        <div class="text-center" style="width:35rem">
+            <p><b></b></p>
+            <img src="/static/images/Abstraction.PNG" class="card-img-top"
+                 alt="Load image">
+
+        </div>
+
+
+        <p>In the above code, we have imported the abc module to create the abstract base class. We created the Calculator as base class that inherited the ABC class and defined an abstract method named get_result(). We have then inherited the base class, Division,implemented the abstract method differently.</p>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+<div class="card text-center">
+    <div class="card-footer text-dark">
+        Diksha Anantha Gowda &#169;
+        <a href="https://validator.w3.org/#validate_by_uri">W3C Validator</a>
+    </div>
+</div>
+</body>
+</html>

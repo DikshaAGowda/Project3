@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <title>Index Page</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: aliceblue;">
+    <a class="navbar-brand mb-0 h1" href="#">IS601</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link disabled active" href="/Home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_1">Article1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_2">Article2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_3">Article3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Article_4">Article4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Calculator">Calculator</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Separation Of Concerns</h1>
+    <p class="lead">Design principle for separating a computer program into distinct sections</p>
+
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <p>Separation of concerns (SoC) is a design principle for separating a computer program into distinct sections. Each section addresses a separate concern, a set of information that affects the code of a computer program. A concern can be as general as "the details of the hardware for an application", or as specific as "the name of which class to instantiate". A program that embodies SoC well is called a modular program. Modularity, and hence separation of concerns, is achieved by encapsulating information inside a section of code that has a well-defined interface. Encapsulation is a means of information hiding.Layered designs in information systems are another embodiment of separation of concerns </p>
+
+    </div>
+    <div class="row">
+        <h3>Separation of Functions</h3>
+        <p>Separation of functions can be summarized by the following statement:<b>Try not to write giant functions.</b> In the below example you can see that the operations are divided into different functions. This increases the readability of the program.</p>
+        <div class="text-center" style="width:35rem">
+
+            <img src="./static/images/Separationofcocern.PNG" class="card-img-top"
+                 alt="Load image">
+
+
+        </div>
+    </div>
+    <div class="row">
+        <h3>Separation of Things</h3>
+        <p>The previous section took a more functionally based approach to solve that particular problem, but we can apply this same principle in a more object-oriented approach. Again, note that we have separated all of the conceptually different functions which we must perform, and created a class to encapsulate them. Each class is concerned with a particular operation, such as printing the result to the console (via println()), validation logic, evaluation logic, and our primary function still coordinates the flow of data between these different things.</p>
+        <div class="text-center" style="width:35rem">
+
+            <img src="./static/images/things_separation.png" class="card-img-top"
+                 alt="Load image">
+
+
+        </div>
+    </div>
+
+    <div class=row">
+        <ul>
+        <li>The Separation of Concerns concept is used in the Calculator program in such a way that the class calculator is divided into separate classes like addition, subtraction, multiplication and division.</li>
+            <li>Class calculation has the declaration of the object and the variables and the class is used as a parameters to the other classes like addition, subtraction, multiplication and division.</li>
+            <li>Calculator_test is used to write the test cases for the calculator.</li>
+            <li>Main program is used to define the functions/methods for the operations of the calculator.</li>
+            <li>Addition Class is used to add the numbers and provide sum.</li>
+            <li>Subtraction Class is used to subtract the numbers and provide difference.</li>
+            <li>Multiplication Class is used to multiply the numbers and provide product.</li>
+            <li>Division Class is used to divide the numbers and provide quotient. It also has divided by zero exception to avoid dividing by zero.</li>
+            <li>Calculator is the base class to print the results of the calculation.</li>
+        </ul>
+
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="card text-center">
+    <div class="card-footer text-dark">
+        Diksha Anantha Gowda &#169;
+        <a href="https://validator.w3.org/#validate_by_uri">W3C Validator</a>
+    </div>
+</div>
+</body>
+</html>
