@@ -5,7 +5,7 @@ from calculations import *
 app = Flask(__name__)
 
 
-def isInvalid_calculate(req_data):
+def validate(req_data):
     if not "num1" in req_data or not isinstance(req_data["num1"], int):
         return True
     if not "num2" in req_data or not isinstance(req_data["num2"], int):
@@ -44,7 +44,7 @@ def Calculator():
 @app.route("/calculate", methods=["POST"])
 def calculate():
     data = request.json
-    error = isInvalid_calculate(data)
+    error = validate(data)
 
     if not error:
         result = None
