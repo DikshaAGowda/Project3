@@ -13,11 +13,11 @@ async function calculate(form) {
     const response = await request.json();
     if (response.success) {
         const resultDiv = document.querySelector(".result");
-        resultDiv.style.color = "green";
+        resultDiv.style.color = "blue";
         resultDiv.innerText = response.result;
     } else {
         const resultDiv = document.querySelector(".result");
-        resultDiv.style.color = "red";
+        resultDiv.style.color = "black";
         resultDiv.innerText = response.error;
     }
 }
