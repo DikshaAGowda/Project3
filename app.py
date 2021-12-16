@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 
 def validate(req_data):
-    if not "num1" in req_data or not isinstance(req_data["num1"], int):
+    if "num1" in req_data and isinstance(req_data["num1"], int):
         return True
-    if not "num2" in req_data or not isinstance(req_data["num2"], int):
+    if "num2" in req_data and isinstance(req_data["num2"], int):
         return True
-    if not "type" in req_data or not isinstance(req_data["type"], str):
+    if "type" in req_data and isinstance(req_data["type"], str):
         return True
     return False
 
@@ -44,9 +44,9 @@ def Calculator():
 @app.route("/calculate", methods=["POST"])
 def calculate():
     data = request.json
-    error = validate(data)
+    answer = validate(data)
 
-    if not error:
+    if answer:
         result = None
         if data["type"] == "addition":
             result = addition(data["num1"], data["num2"])
