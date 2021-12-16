@@ -57,20 +57,31 @@
     </div>
 </nav>
 
-    <div class="calculator-div">
+   <div class = "Center">
+    <div class="card m-2" style="width: 300px";>
+        <div class="card-body">
         <a href="/history">Display history</a>
         <form onsubmit="calculate(this)">
-            <input name="num1" type="number" placeholder="Value 1" required />
-            <input name="num2" type="number" placeholder="Value 2" required />
+            <div class="block">
+            <lable>Enter Number1:</lable><input name="num1" type="number" placeholder="Value 1" required />
+                </div>
+                <div class="block">
+            <lable>Enter Number2:</lable><input name="num2" type="number" placeholder="Value 2" required />
+                    </div>
             <select name="type" required>
                 <option value="addition">Addition</option>
-                <option value="substraction">Subtraction</option>
+                <option value="subtraction">Subtraction</option>
                 <option value="multiplication">Multiplication</option>
                 <option value="division">Division</option>
             </select>
-            <input type="submit">
+            <input type="submit" value="Calculate"/>
         </form>
         <p class="result"></p>
+
+
+            </div>
+    </div>
+
     </div>
     <script src="/static/js/index.js"></script>
 </body>
