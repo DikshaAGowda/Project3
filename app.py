@@ -63,7 +63,7 @@ def calculate():
             calculation.to_csv("calculations.csv", mode='a', index=False, header=False)
             return jsonify({ "success": True, "result": result })
 
-    return jsonify({ "success": False, "error": "Invalid data" })
+    return jsonify({ "success": False, "error": "Enter valid data" })
 
 
 @app.route("/history", methods=["GET"])
