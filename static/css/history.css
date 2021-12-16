@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 table {
@@ -20,11 +20,11 @@ table .header {
 
 td,
 th {
-    border: 1px solid #dddddd;
+    border: 1px solid gray;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: gray;
 }
