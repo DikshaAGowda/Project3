@@ -1,90 +1,33 @@
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>2</th>
-      <th>3</th>
-      <th>addition</th>
-      <th>5</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2</td>
-      <td>3</td>
-      <td>addition</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3</td>
-      <td>16</td>
-      <td>multiplication</td>
-      <td>48</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>67</td>
-      <td>76</td>
-      <td>addition</td>
-      <td>143</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>67</td>
-      <td>76</td>
-      <td>substraction</td>
-      <td>-9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>93</td>
-      <td>75</td>
-      <td>addition</td>
-      <td>168</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>93</td>
-      <td>75</td>
-      <td>substraction</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>8</td>
-      <td>addition</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>89</td>
-      <td>47</td>
-      <td>addition</td>
-      <td>136</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>7</td>
-      <td>4</td>
-      <td>addition</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>34</td>
-      <td>32</td>
-      <td>substraction</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>4</td>
-      <td>5</td>
-      <td>multiplication</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Displaying Calculator History</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/history.css">
+</head>
+
+<body>
+    <table>
+        <tr class="header">
+            <th>Entry Number</th>
+            <th>Number 1</th>
+            <th>Number 2</th>
+            <th>Operation Type</th>
+            <th>Result</th>
+        </tr>
+        {% for i, row in history %}
+        <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row["value1"]}}</td>
+            <td>{{row["value2"]}}</td>
+            <td>{{row["operation_type"]}}</td>
+            <td>{{row["result"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <script src="/static/js/page.js"></script>
+</body>
+
+</html>
